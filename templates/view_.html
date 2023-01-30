@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="" method="post">
+       {% csrf_token %}
+    введите имя файла: <input type="text" value=""  name="filename"/>
+    <p>выбранный файл: {{ filename }}</p>
+</form>
+
+<p>найденные слова в выбранном файле: {{list_of_word}}</p>
+
+<form action="" method="get">
+введите слово для поиска:
+<input type="text" name="wordcount">
+<input type="submit" value="Find">
+   <p> введенное слово '{{ wordcount }}' встречается в файле '{{ counter }}' раз</p>
+    Delete data: <input type="submit" value="Delete"  name="delete_"/>
+</form>
+</body>
+</html>
